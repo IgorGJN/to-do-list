@@ -13,7 +13,7 @@ Link -> [https://igorgjn.github.io/to-do-list/](https://igorgjn.github.io/to-do-
 12 de Julho de 2022
 
 ## 🎨 Layout
-<code><img height="50%" src="https://igorgjn.github.io/primeira-pagina-web/imagens/layout.gif" alt="Layout do site"/></code>
+<code><img height="50%" src="https://igorgjn.github.io/to-do-list/layout.png" alt="Layout do site"/></code>
 <!--
 ## 🆕 Novidades
 Layout responsivo para mobile. 
