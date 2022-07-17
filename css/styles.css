@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #FCFC30;
+    --secondary-color: #465EFF;
+}
+
+@font-face {
+    font-family: 'icones';
+    src: url(css/icones.ttf);
+    font-style: unset;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif, icomoon;
+}
+
+body {
+    background-color: var(--secondary-color);
+    font: bold 1.5rem 'Open Sans', sans-serif;
+}
+
+.todo {
+    display: flex;
+    width: 80vw;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    gap: 15px;
+}
+
+.todo_title {
+    display: flex;
+    background-color: var(--primary-color);
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    box-shadow: 0px 2px #a6a603;
+}
+
+header button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--secondary-color);
+    padding: 0 8px;
+}
+
+.button_menu i::before {
+    content: "\e904";
+    font-size: 24px;
+}
+
+.color_theme i::before {
+    content: "\e90f";
+    font-size: 24px;
+}
+
+.menu_lateral {
+    z-index: 10;
+    position: absolute;
+    left: -100vw;
+    width: 75vw;
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    transition: .4s;
+}
+
+.menu_lateral-ativo {
+    left: 0;
+    transition: .4s;
+}
+
+.menu_lateral a {
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.todo_item {
+    display: flex;
+    width: 88vw;
+    justify-content: space-between;
+    padding: 8px;
+    box-shadow: 1px 1px 5px var(--primary-color);
+    color: var(--primary-color);
+    margin: 10px 0 ;
+    align-items: center;
+}
+
+.todo_item > div {
+    width: 80%;
+}
+
+.todo_item:hover {
+    cursor: pointer;
+    transition: all .5s ease;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+
+.todo_item > input[type='text'] {
+    border: none;
+    width: 80%;
+    font: inherit;
+}
+
+.todo_item > input[type='button'],
+.todo_item > input[type='checkbox'] {
+    width: 35px;
+    height: 35px;
+    font: inherit;
+    color: red;
+    background-color: var(--primary-color);
+    margin: 0 5px
+}
+
+
+.todo_item > input[type='checkbox']:checked  + div {
+    text-decoration:line-through;
+}
+
+.todo_new_item{
+    display: flex;
+    background-color: #1d2870;
+    width: 100%;
+    height: 70px;
+    justify-content: space-evenly;
+    padding: 10px 0;
+    box-shadow: 1px 1px 5px var(--secondary-color);
+    margin: 10px;
+    font: inherit;
+    font-size: 1rem;
+}
+
+.todo_new_item > input{
+    background-color: var(--secondary-color);
+    border: none;
+    width: 80%;
+    outline: none;
+    font: inherit;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.todo_new_item > input::placeholder {
+    font-style: italic;
+    font-weight: normal;
+    color: black;
+}

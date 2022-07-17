@@ -5,15 +5,16 @@
 Projeto de uma lista de tarefas, da serie de mini projetos com Java Script de 
 Fernando Leonid.
 Fiz alterações no estilo, deixei mais responsivo e pretendo fazer algumas alterações.
+Incluir um menu lateral e ooutras listas de tarefas.
 
 ## 🔗 Como acessar
 Link -> [https://igorgjn.github.io/to-do-list/](https://igorgjn.github.io/to-do-list/)
 
 ### 📅 Ultima atualização 
-12 de Julho de 2022
+17 de Julho de 2022
 
 ## 🎨 Layout
-<code><img height="50%" src="https://igorgjn.github.io/to-do-list/layout.png" alt="Layout do site"/></code>
+<code><img height="50%" src="img/layout.png" alt="Layout do site"/></code>
 <!--
 ## 🆕 Novidades
 Layout responsivo para mobile. 

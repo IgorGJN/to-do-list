@@ -1,10 +1,45 @@
 'use strict';
 
+const botaoMenu = document.querySelector('.button_menu');
+const menu = document.querySelector('.menu_lateral');
+const botaoJW = document.querySelector('.jw');
+const botaoTrabalho = document.querySelector('.trabalho');
+const botaoHome = document.querySelector('.home');
+
+
+botaoMenu.addEventListener('click', () => {
+    menu.classList.toggle('menu_lateral-ativo')
+})
+
+botaoJW.addEventListener('click', () => {
+    localBD = "jw"
+    console.log(localBD);
+    menu.classList.toggle('menu_lateral-ativo')
+    atualizarTela();
+})
+
+botaoTrabalho.addEventListener('click', () => {
+    localBD = "trabalho"
+    console.log(localBD);
+    menu.classList.toggle('menu_lateral-ativo')
+    atualizarTela();
+})
+
+botaoHome.addEventListener('click', () => {
+    localBD = "todoList"
+    console.log(localBD);
+    menu.classList.toggle('menu_lateral-ativo')
+    atualizarTela();
+})
+
+
+var localBD = "todoList"; 
+
 // let banco = []; 
 
-const getBanco = () => JSON.parse(localStorage.getItem('todoList')) ?? [];
+const getBanco = () => JSON.parse(localStorage.getItem(localBD)) ?? [];
 
-const setBanco = (banco) => localStorage.setItem('todoList', JSON.stringify(banco));
+const setBanco = (banco) => localStorage.setItem(localBD, JSON.stringify(banco));
 
 const criarItem = (tarefa, status, indice) => {
     const item = document.createElement('label');
