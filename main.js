@@ -2,6 +2,9 @@
 
 const botaoMenu = document.querySelector('.button_menu');
 const menu = document.querySelector('.menu_lateral');
+const colorTheme = document.querySelector('.color_theme');
+const modeDark = document.querySelector('.light');
+const icon = document.querySelector('.icon');
 const botaoJW = document.querySelector('.jw');
 const botaoTrabalho = document.querySelector('.trabalho');
 const botaoHome = document.querySelector('.home');
@@ -9,6 +12,15 @@ const botaoHome = document.querySelector('.home');
 
 botaoMenu.addEventListener('click', () => {
     menu.classList.toggle('menu_lateral-ativo')
+})
+
+colorTheme.addEventListener('click', () => {
+    modeDark.classList.toggle('dark')
+    if (icon.textContent === "dark_mode") {
+        icon.textContent="light_mode"
+    } else {
+        icon.textContent="dark_mode"
+    }
 })
 
 botaoJW.addEventListener('click', () => {

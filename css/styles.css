@@ -1,13 +1,21 @@
-:root {
+.light {
     --primary-color: #FCFC30;
     --secondary-color: #465EFF;
+    --caixa: #1D2870;
+    --shadow: #A6A603;
+    --dark: black;
+    --light: white;
 }
 
-@font-face {
-    font-family: 'icones';
-    src: url(css/icones.ttf);
-    font-style: unset;
+.dark {
+    --primary-color: #BBBBBB;
+    --secondary-color: #000000;
+    --caixa: #757575;
+    --shadow: #a0a0a0;
+    --dark: white;
+    --light: black;
 }
+
 
 * {
     margin: 0;
@@ -15,6 +23,33 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif, icomoon;
 }
+
+/*
+Customization
+
+Fill: 0 ou 1
+
+Weight: entre 100 e 700
+
+Grade: entre -25 (low) e 200 (high emphasis)
+
+Optical size: entre 20px e 48px
+
+Tipos: Outlined, Rounded, Sharp.
+*/
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 500,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+/*
+span.material-symbols-outlined {
+    font-size: 2rem;
+} */
 
 body {
     background-color: var(--secondary-color);
@@ -38,7 +73,7 @@ body {
     align-items: center;
     font-size: 1rem;
     color: var(--secondary-color);
-    box-shadow: 0px 2px #a6a603;
+    box-shadow: 0px 2px var(--shadow);
 }
 
 header button {
@@ -48,21 +83,11 @@ header button {
     padding: 0 8px;
 }
 
-.button_menu i::before {
-    content: "\e904";
-    font-size: 24px;
-}
-
-.color_theme i::before {
-    content: "\e90f";
-    font-size: 24px;
-}
-
 .menu_lateral {
     z-index: 10;
     position: absolute;
     left: -100vw;
-    width: 75vw;
+    width: 40vw;
     height: 100vh;
     background-color: var(--primary-color);
     display: flex;
@@ -126,7 +151,7 @@ header button {
 
 .todo_new_item{
     display: flex;
-    background-color: #1d2870;
+    background-color: var(--caixa);
     width: 100%;
     height: 70px;
     justify-content: space-evenly;
@@ -135,6 +160,7 @@ header button {
     margin: 10px;
     font: inherit;
     font-size: 1rem;
+    color: var(--light);
 }
 
 .todo_new_item > input{
@@ -145,10 +171,19 @@ header button {
     font: inherit;
     text-align: center;
     font-size: 1.5rem;
+    color: var(--dark);
+
 }
 
 .todo_new_item > input::placeholder {
     font-style: italic;
     font-weight: normal;
-    color: black;
+}
+
+@media (max-width: 500px) {
+    
+    .menu_lateral {
+        width: 75vw;
+    }
+
 }
