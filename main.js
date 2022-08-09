@@ -8,6 +8,8 @@ const icon = document.querySelector('.icon');
 const botaoJW = document.querySelector('.jw');
 const botaoTrabalho = document.querySelector('.trabalho');
 const botaoHome = document.querySelector('.home');
+const botaoCursos = document.querySelector('.cursos');
+
 
 
 botaoMenu.addEventListener('click', () => {
@@ -39,6 +41,13 @@ botaoTrabalho.addEventListener('click', () => {
 
 botaoHome.addEventListener('click', () => {
     localBD = "todoList"
+    console.log(localBD);
+    menu.classList.toggle('menu_lateral-ativo')
+    atualizarTela();
+})
+
+botaoCursos.addEventListener('click', () => {
+    localBD = "cursos"
     console.log(localBD);
     menu.classList.toggle('menu_lateral-ativo')
     atualizarTela();
